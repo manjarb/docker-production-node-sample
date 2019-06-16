@@ -1,0 +1,109 @@
+.columns {
+  margin: 0;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  &.small {
+    max-width: 920px;
+  }
+}
+
+.table {
+  &.medium-table {
+    font-size: 1.5rem;
+  }
+}
+
+.message {
+  &.is-grey {
+    .message-header {
+      background-color: $grey-label-color;
+      color: $black-color;
+      font-size: 2.25rem;
+      @media (max-width: $screen-sm-max) {
+        font-size: 1.75rem;
+      }
+    }
+    .message-body {
+      background-color: $white-color;
+      border: 1px solid $grey-label-color;
+      h3 {
+        font-size: 1.75rem;
+        @media (max-width: $screen-sm-max) {
+          font-size: 1.5rem;
+        }
+      }
+      ul {
+        font-size: 1.25rem;
+      }
+    }
+  }
+  &.accordion {
+    .message-header {
+      cursor: pointer;
+      span {
+        display: inherit;
+      }
+    }
+    .message-body {
+      max-height: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+    .message-content {
+      padding: 1.25em 1.5em;
+    }
+    &.is-active {
+      .message-body {
+        max-height: none;
+      }
+    }
+  }
+}
+
+.button {
+  &.is-red {
+    background-color: $red-color;
+    color: $white-color;
+  }
+}
+
+label {
+  font-size: 1.5rem;
+  &.label {
+    font-size: 1.5rem;
+    position: relative;
+    .input-require-mark {
+      position: absolute;
+      color: $red-color;
+      font-size: 24px;
+      top: 0;
+      right: -10px;
+    }
+  }
+  &.radio {
+    margin-right: 15px;
+  }
+}
+
+select {
+  &.is-danger {
+    border-color: #ff3860;
+  }
+}
+
+.help {
+  font-size: 1rem;
+}
+
+.button {
+  &.full-width {
+    border-radius: 10px;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    height: auto;
+  }
+}

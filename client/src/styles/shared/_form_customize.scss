@@ -1,0 +1,21 @@
+.address-no-select-form-field {
+  .mat-form-field-infix {
+    width: auto;
+    min-width: 60px;
+    margin-right: 5px; //
+  }
+}
+
+.auto-width-form-input {
+  .mat-form-field-infix {
+    width: auto;
+  }
+}
+
+.vertical-input-box {
+  .mat-radio-label {
+    @media (max-width: $screen-sm-max) {
+      white-space: normal;
+    }
+  }
+}

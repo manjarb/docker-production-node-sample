@@ -1,0 +1,17 @@
+{
+    "apps": [{
+      "name": "docker-production-node-sample",
+      "script": "./index.js",
+      "instances": "1",
+      "log_date_format": "YYYY-MM-DD HH:mm Z",
+      "max_memory_restart": "150M",
+      "env_testing": {
+        "NODE_ENV": "testing",
+        "PORT": 8500
+      },
+      "env_prod": {
+        "NODE_ENV": "production",
+        "PORT": 5000
+      }
+    }]
+}
