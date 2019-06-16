@@ -104,7 +104,7 @@ Add
             <thead>
               <tr>
                 <th>Id</th>
-                <th>First Name eeeeoaeoaeaoeaoeoaeao eeeeoaeoaeaoeaoeoaeao eeeeoaeoaeaoeaoeoaeao eeeeoaeoaeaoeaoeoaeao</th>
+                <th>First Name</th>
                 <th>Last Name</th>
                 <th>Position</th>
                 <th>Department</th>
@@ -120,15 +120,15 @@ Add
                   <td>{emp.position}</td>
                   <td>{emp.department}</td>
                   <td>
-    <button
-                      className="button is-danger"
-                      onClick={() => this.deleteEmp(emp._id)}
-                    >
+                    <button
+      className="button is-danger"
+      onClick={() => this.deleteEmp(emp._id)}
+    >
 Delete
 
-                    </button>
-  </td>
-                                </tr>
+    </button>
+                  </td>
+                </tr>
               ))}
             </tbody>
           </table>
@@ -137,9 +137,9 @@ Delete
         {isShowModal
           && (
           <AddEmployeeModal
-  addEmployee={this.addEmployee}
-  closeModal={this.closeEmployeeModal}
-/>
+            addEmployee={this.addEmployee}
+            closeModal={this.closeEmployeeModal}
+          />
           )
         }
         {isLoading && <Loading />}
