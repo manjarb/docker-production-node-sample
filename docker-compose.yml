@@ -15,7 +15,7 @@ services:
     networks:
       - front-tier
       - back-tier
-    command: bash -c "npm run build --prefix client && npm run restart-prod"
+    command: bash -c "npm run build --prefix client && npm run prod"
     # depends_on:
       # - redis
       # - db

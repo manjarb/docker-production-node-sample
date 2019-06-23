@@ -17,7 +17,7 @@
     "restart-prod-background": "pm2 restart pm2.json --env prod",
     "compose:up": "docker-compose -f docker-compose.yml -f docker-compose.dev.yml up",
     "compose:up:build": "docker-compose -f docker-compose.yml -f docker-compose.dev.yml up --build",
-    "prod:compose:up:build": "git pull && NODE_ENV=production docker-compose up --build",
+    "prod:compose:up:build": "git pull && NODE_ENV=production docker-compose up -d --build",
     "compose:up:build:force": "docker-compose -f docker-compose.yml -f docker-compose.dev.yml up --build --force-recreate",
     "compose:up:build:background": "docker-compose -f docker-compose.yml -f docker-compose.dev.yml up -d --build",
     "compose:down": "docker-compose down -v",
