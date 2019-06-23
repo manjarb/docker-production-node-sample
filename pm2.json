@@ -2,6 +2,7 @@
     "apps": [{
       "name": "docker-production-node-sample",
       "script": "./index.js",
+      "interpreter": "./node_modules/@babel/node/bin/babel-node.js",
       "instances": "1",
       "log_date_format": "YYYY-MM-DD HH:mm Z",
       "max_memory_restart": "150M",
