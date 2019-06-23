@@ -33,3 +33,5 @@ npm-debug.log
 env.json
 # dev.js
 prod.js
+
+client/dist

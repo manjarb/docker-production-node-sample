@@ -1,8 +1,5 @@
 FROM node:8.16.0-alpine
 
-ARG NODE_ENV=development
-ENV NODE_ENV=${NODE_ENV}
-
 RUN mkdir /app
 WORKDIR /app
 # RUN mkdir /usr/src/app
@@ -16,7 +13,7 @@ RUN apk --no-cache --virtual build-dependencies add \
    g++ \
    bash
 
-RUN npm install -g nodemon pm2
+RUN npm install -g nodemon
 
 COPY package.json package.json
 COPY client/package.json client/package.json
