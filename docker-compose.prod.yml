@@ -1,0 +1,42 @@
+version: '3'
+
+services:
+  nginx: 
+    image: nginx:latest
+    container_name: production_nginx
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+      - ./nginx/error.log:/etc/nginx/error_log.log
+      - ./nginx/cache/:/etc/nginx/cache
+      # - /etc/letsencrypt/:/etc/letsencrypt/
+    networks:
+      - front-tier
+      - back-tier 
+    environment:
+      - ENV=production
+    ports:
+      - 9000:80
+      - 443:443
+  # nginx-prod:
+  #   container_name: nginx-prod
+  #   image: nginx-prod:1.0
+  #   build: ./nginx
+  #   ports:
+  #     - '9000:80'
+  #   networks:
+  #     - front-tier
+  #   depends_on:
+  #     - api
+  #   command: bash -c "sudo nginx -t && sudo systemctl restart nginx"
+  #   environment:
+  #     - ENV=production
+  #   volumes:
+  #     # - ./nginx.conf:/etc/nginx/nginx.conf
+  #     - certificates:/etc/letsencrypt/
+
+volumes:
+  certificates:
+
+networks:
+  front-tier:
+  back-tier:

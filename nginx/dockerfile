@@ -1,0 +1,6 @@
+FROM nginx:latest
+
+RUN apk --no-cache --virtual build-dependencies add \
+   bash
+
+COPY nginx.conf /etc/nginx/nginx.conf
