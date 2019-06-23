@@ -7,6 +7,9 @@ import keys from './config/keys'
 import './models/Employee'
 import AdminRoutes from './routes/adminRoutes'
 
+console.log(process.env.NODE_ENV, " :nodeeeeeeeeeee")
+console.log(process.env.MONGO_URI, " :process.env.CONFIG process.env.CONFIG process.env.CONFIG")
+console.log(keys)
 mongoose.connect(keys.mongoURI)
 
 const app = express()
