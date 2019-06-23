@@ -3,6 +3,7 @@ version: '3'
 services:
   api:
     container_name: api
+    image: api:1.0
     build: '.'
     # env_file:
       # - '.env'
@@ -20,6 +21,7 @@ services:
       # - db
   client:
     container_name: client
+    image: client:1.0
     build: '.'
     env_file:
       - '.env'
